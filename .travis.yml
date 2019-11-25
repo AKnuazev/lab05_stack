@@ -8,10 +8,10 @@ jobs:
   include:
     - name: "tests"
       script:
-        - docker run -t -v $(pwd):/var/builder/ -w /var/builder --entrypoint ./scripts/tests.sh $DOCKER_IMAGE
+        - docker run -t -v $(pwd):/var/builder/ -w /var/builder --entrypoint ./scripts/tests.sh
     - name: "coverage"
       script:
-        - docker run -t -v $(pwd):/var/builder/ -w /var/builder --entrypoint ./scripts/coverage.sh $DOCKER_IMAGE
+        - docker run -t -v $(pwd):/var/builder/ -w /var/builder --entrypoint ./scripts/coverage.sh 
 
 notifications:
   email: false
