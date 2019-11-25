@@ -37,7 +37,8 @@ TEST(Stack_Test,AddElem_Test)
     EXPECT_EQ(stack.head(),b);
     stack.pop();
     EXPECT_EQ(stack.head(),a);
-
+    stack.pop();
+    EXPECT_THROW(stack.head(),std::exception)
 }
 
 TEST(NoCopyStack_Test, AddElem_Test)
