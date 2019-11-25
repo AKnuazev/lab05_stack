@@ -29,15 +29,30 @@ public:
 
 TEST(Stack_Test,AddElem_Test)
 {
+    int a=5,b=8;
     Stack<int> stack;
-    stack.push(4);
-    stack.push(5);
+    stack.push(a);
+    stack.push(b);
+
+    EXPECT_EQ(stack.head(),b);
+    stack.pop();
+    EXPECT_EQ(stack.head(),a);
+
 }
 
 TEST(NoCopyStack_Test, AddElem_Test)
 {
+    int x1=2,y1=4;
+    int x2=3,y=7;
+    Point pnt(x,y);
+
     NoCopyStack<Point> stack;
-    stack.push(Point(3,4));
-    stack.push_emplace(5,6);
+    stack.push(Point(x1,y1));
+    stack.push_emplace(x2,y2);
+
+    EXPECT_EQ(stack.head().x,x2);
+    stack.pop();
+    EXPECT_EQ(stack.head().y,y1);
+
 }
 
