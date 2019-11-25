@@ -43,7 +43,7 @@ TEST(Stack_Test,AddElem_Test)
 TEST(NoCopyStack_Test, AddElem_Test)
 {
     int x1=2,y1=4;
-    int x2=3,y=7;
+    int x2=3,y2=7;
     Point pnt(x,y);
 
     NoCopyStack<Point> stack;
