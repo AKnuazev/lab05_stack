@@ -44,7 +44,7 @@ TEST(NoCopyStack_Test, AddElem_Test)
 {
     int x1=2,y1=4;
     int x2=3,y2=7;
-    Point pnt(x,y);
+    Point pnt(x1,y1);
 
     NoCopyStack<Point> stack;
     stack.push(Point(x1,y1));
