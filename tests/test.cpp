@@ -2,8 +2,8 @@
 
 #include <gtest/gtest.h>
 #include "../include/Stack.h"
-//#include "../include/NoCopyStack.h"
-/*
+#include "../include/NoCopyStack.h"
+
 class Point
 {
 public:
@@ -25,7 +25,7 @@ public:
         this->x = pnt.x;
         this->y = pnt.y;
     }
-};*/
+};
 
 TEST(Stack_Test,AddElem_Test)
 {
@@ -33,11 +33,11 @@ TEST(Stack_Test,AddElem_Test)
     stack.push(4);
     stack.push(5);
 }
-/*
+
 TEST(NoCopyStack_Test, AddElem_Test)
 {
     NoCopyStack<Point> stack;
     stack.push(Point(3,4));
     stack.push_emplace(5,6);
-}*/
+}
 
