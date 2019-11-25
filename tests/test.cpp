@@ -3,7 +3,7 @@
 #include <gtest/gtest.h>
 #include "../include/Stack.h"
 #include "../include/NoCopyStack.h"
-
+#include <exception>
 class Point
 {
 public:
@@ -38,7 +38,7 @@ TEST(Stack_Test,AddElem_Test)
     stack.pop();
     EXPECT_EQ(stack.head(),a);
     stack.pop();
-    EXPECT_THROW(stack.head(), std::exception());
+    EXPECT_THROW(stack.head(), std::exception);
 }
 
 TEST(NoCopyStack_Test, AddElem_Test)
