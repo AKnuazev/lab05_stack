@@ -43,6 +43,8 @@ TEST(Stack_Test,AddElem_Test)
 
     EXPECT_EQ(std::is_move_constructible<Stack<int>>::value, true);
     EXPECT_EQ(std::is_move_assignable<Stack<int>>::value, true);
+    EXPECT_EQ(std::is_copy_constructible<Stack<int>>::value, false);
+    EXPECT_EQ(std::is_copy_assignable<Stack<int>>::value, false);
 }
 
 TEST(NoCopyStack_Test, AddElem_Test)
@@ -61,5 +63,7 @@ TEST(NoCopyStack_Test, AddElem_Test)
 
     EXPECT_EQ(std::is_move_constructible<NoCopyStack<int>>::value, true);
     EXPECT_EQ(std::is_move_assignable<NoCopyStack<int>>::value, true);
+    EXPECT_EQ(std::is_copy_constructible<NoCopyStack<int>>::value, false);
+    EXPECT_EQ(std::is_copy_assignable<NoCopyStack<int>>::value, false);
 }
 
