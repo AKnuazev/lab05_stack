@@ -29,7 +29,6 @@ inline void NoCopyStack<T>::push_emplace(Args && ...value)
 	//top_elem = new NoCopyNode<T>;
     top_elem = new NoCopyNode<T>{{std::forward<Args>(value)...}, curr};
 //	top_elem->value = std::move({ std::forward<Args>(value)... });
-//	top_elem->prev = curr;
 }
 
 template<typename T>
