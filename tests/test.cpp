@@ -40,6 +40,9 @@ TEST(Stack_Test,AddElem_Test)
     stack.pop();
 
     EXPECT_THROW(stack.pop(), std::exception);
+
+    EXPECT_EQ(std::is_move_constructible<Stack>::value, false);
+    EXPECT_EQ(std::is_move_assignable<Stack>::value, true);
 }
 
 TEST(NoCopyStack_Test, AddElem_Test)
@@ -56,5 +59,7 @@ TEST(NoCopyStack_Test, AddElem_Test)
     stack.pop();
     EXPECT_EQ(stack.head().y,y1);
 
+    EXPECT_EQ(std::is_move_constructible<NoCopyStack>::value, false);
+    EXPECT_EQ(std::is_move_assignable<NoCopyStack>::value, true);
 }
 
