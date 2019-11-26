@@ -33,7 +33,6 @@ int main()
 {
 	Stack<int> stack;
 	const int a = 5;
-    int x=55;
     
 	stack.push(a);
 	stack.push(3);
