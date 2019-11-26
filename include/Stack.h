@@ -13,7 +13,11 @@ class Stack
 {
 private:
 	Node<T>* top_elem = nullptr;
-public:	
+public:
+    Stack()= default;
+    Stack(const Stack &stack)= delete;
+    Stack(Stack&& stack)= default;
+
 	void push(T&& value);
 	void push(const T& value);
 	void pop();

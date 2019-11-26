@@ -14,6 +14,10 @@ class NoCopyStack
 private:
 	NoCopyNode<T>* top_elem = nullptr;
 public:
+    NoCopyStack()= default;
+    NoCopyStack(const NoCopyStack &stack)= delete;
+    NoCopyStack(NoCopyStack&& stack)= default;
+
 	template <typename ... Args>
 	void push_emplace(Args&&... value);
 	void push(T&& value);
