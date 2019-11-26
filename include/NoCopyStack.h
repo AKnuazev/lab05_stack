@@ -15,8 +15,9 @@ private:
 	NoCopyNode<T>* top_elem = nullptr;
 public:
     NoCopyStack()= default;
-    NoCopyStack(const NoCopyStack &stack)= delete;
-    NoCopyStack(NoCopyStack&& stack)= default;
+    NoCopyStack(const NoCopyStack &NoCopyStack)= delete; // no copy
+    NoCopyStack(NoCopyStack&& NoCopyStack)= default; // constructable move
+    auto operator=(NoCopyStack&& NoCopyStack) noexcept ->class NoCopyStack& = default; // assignable move
 
 	template <typename ... Args>
 	void push_emplace(Args&&... value);

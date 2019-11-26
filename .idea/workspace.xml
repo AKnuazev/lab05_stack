@@ -10,6 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="067ba52c-c17e-4053-9531-b8b0d0eebdb3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/NoCopyStack.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/NoCopyStack.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/Stack.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Stack.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,7 +57,8 @@
       <workItem from="1574677008006" duration="5573000" />
       <workItem from="1574683449418" duration="1351000" />
       <workItem from="1574750626209" duration="2040000" />
-      <workItem from="1574753185158" duration="1698000" />
+      <workItem from="1574753185158" duration="1978000" />
+      <workItem from="1574755796491" duration="1083000" />
     </task>
     <servers />
   </component>

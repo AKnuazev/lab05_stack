@@ -15,8 +15,9 @@ private:
 	Node<T>* top_elem = nullptr;
 public:
     Stack()= default;
-    Stack(const Stack &stack)= delete;
-    Stack(Stack&& stack)= default;
+    Stack(const Stack &stack)= delete; // no copy
+    Stack(Stack&& stack)= default; // constructable move
+    auto operator=(Stack&& stack) noexcept ->class Stack& = default; // assignable move
 
 	void push(T&& value);
 	void push(const T& value);
